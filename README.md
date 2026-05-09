@@ -1,37 +1,37 @@
 # task-stack
 
-单人多项目工作时的任务上下文栈管理工具。
+A task context stack for single-person, multi-project workflows.
 
-当你频繁在多个项目间切换时，`task-stack` 帮你记录"正在做什么、从哪里来、要回到哪里去"。
+When you switch between projects frequently, `task-stack` tracks what you're working on, where you came from, and where you need to go back to.
 
-## 安装
+## Install
 
 ```bash
 npm install -g @cclee/task-stack
 ```
 
-## 使用
+## Usage
 
 ```bash
-task push "写登录页"       # 压栈，记录当前任务
-task pop                   # 弹栈，返回上一个任务
-task note "需要改接口"     # 给当前任务追加备注
-task stack                 # 查看任务链路
-task log                   # 查看完成记录
-task projects              # 查看/管理项目列表
-task projects add <名称>   # 添加新项目
-task clear                 # 清空栈
+task push "build login page"  # Push a new task onto the stack
+task pop                      # Pop current task, return to previous
+task note "need API change"   # Append a note to current task
+task stack                    # View the full task chain
+task log                      # View completed tasks
+task projects                 # View / manage project list
+task projects add <name>      # Add a new project
+task clear                    # Clear the stack
 ```
 
-## Claude Code 集成
+## Claude Code Integration
 
-可注册为 [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill，通过自然语言调用：
+Can be registered as a [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill for natural language invocation:
 
-> "task push 写登录页"
+> "task push build login page"
 
-## 数据存储
+## Data Storage
 
-任务数据保存在 `~/.task-stack.json`。
+Task data is stored in `~/.task-stack.json`.
 
 ## About the Author
 
