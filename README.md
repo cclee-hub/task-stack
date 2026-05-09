@@ -2,7 +2,7 @@
 
 A task context stack for single-person, multi-project workflows.
 
-When you switch between projects frequently, `task-stack` tracks what you're working on, where you came from, and where you need to go back to.
+Not just for coding — manage any kind of daily tasks. When you switch between projects or contexts frequently, `task-stack` tracks what you're working on, where you came from, and where you need to go back to.
 
 ## Install
 
