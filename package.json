@@ -6,8 +6,12 @@
   "bin": {
     "task": "./dist/cli.js"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
+    "prepublishOnly": "npm run build",
     "dev": "ts-node --esm src/cli.ts"
   },
   "dependencies": {
