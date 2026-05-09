@@ -7,8 +7,7 @@
 ## 安装
 
 ```bash
-npm install
-npm run build
+npm install -g @cclee/task-stack
 ```
 
 ## 使用

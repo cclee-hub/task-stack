@@ -1,5 +1,5 @@
 {
-  "name": "task-stack",
+  "name": "@cclee/task-stack",
   "version": "1.0.0",
   "description": "Task context stack for single-person multi-project work",
   "type": "module",
