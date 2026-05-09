@@ -1,0 +1,21 @@
+{
+  "name": "task-stack",
+  "version": "1.0.0",
+  "description": "Task context stack for single-person multi-project work",
+  "type": "module",
+  "bin": {
+    "task": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node --esm src/cli.ts"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "inquirer": "^10.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
