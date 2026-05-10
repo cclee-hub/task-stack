@@ -119,8 +119,12 @@ async function main() {
       console.log('\n  最近完成:\n');
       recent.forEach(({ task, poppedAt }) => {
         const tag = task.project ? `[${task.project}]` : '[工作]';
-        const time = new Date(poppedAt).toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit', hour12: false });
-        console.log(`  ✓ ${tag} ${task.description}  ${time}`);
+        const d = new Date(poppedAt);
+        const today = new Date();
+        const isToday = d.toDateString() === today.toDateString();
+        const time = d.toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit', hour12: false });
+        const dateStr = isToday ? time : `${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')} ${time}`;
+        console.log(`  ✓ ${tag} ${task.description}  ${dateStr}`);
       });
       console.log('');
       break;
